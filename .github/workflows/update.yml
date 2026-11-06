@@ -40,7 +40,7 @@ jobs:
         run: python -m pytest -q
       - name: Configure Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Collect and generate
         env:
           SITE_BASE_URL: ${{ steps.pages.outputs.base_url }}
