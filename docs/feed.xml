@@ -1,11 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>KVKK Veri İhlali Bildirimleri (Bağımsız RSS)</title>
     <link>https://www.kvkk.gov.tr/veri-ihlali-bildirimi</link>
     <description>KVKK'nın kamuya açık veri ihlali duyuruları. KVKK ile bağlantısı olmayan bağımsız projedir.</description>
     <language>tr-TR</language>
-    <lastBuildDate>Fri, 06 Nov 2026 08:04:12 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 08:20:25 +0000</lastBuildDate>
+    <atom:link href="https://rootlus.github.io/kvkk-rss/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kamuoyu Duyurusu (Veri İhlali Bildirimi) – D Fast Dağıtım Hizmetleri ve Lojistik A.Ş.</title>
       <link>https://www.kvkk.gov.tr/Icerik/9079/kamuoyu-duyurusu-veri-ihlali-bildirimi-d-fast-dagitim-hizmetleri-ve-lojistik-a-s</link>
