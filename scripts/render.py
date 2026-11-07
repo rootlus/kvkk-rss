@@ -3,6 +3,7 @@ from datetime import date, datetime, time
 from email.utils import format_datetime
 from html import escape
 import json
+import re
 from urllib.parse import urlsplit
 from xml.etree import ElementTree as ET
 from zoneinfo import ZoneInfo
@@ -13,13 +14,36 @@ TITLE = "KVKK Veri İhlali Bildirimleri (Bağımsız RSS)"
 DISCLAIMER = "KVKK ile bağlantısı olmayan bağımsız projedir."
 ATOM = "http://www.w3.org/2005/Atom"
 ET.register_namespace("atom", ATOM)
+FEED_LIMITS = (5, 10, 25, 50)
+
+
+def display_title(title):
+    shortened = re.sub(r"^Kamuoyu\s+Duyurusu\b\s*[:–—-]?\s*", "", title, flags=re.IGNORECASE)
+    return shortened or title
+
+
+def limit_feed(feed, limit, feed_url=None):
+    """Filter an already published feed without changing item metadata or dates."""
+    if limit < 1:
+        raise ValueError("RSS sınırı pozitif bir tam sayı olmalı")
+    root = ET.fromstring(feed)
+    channel = root.find("channel")
+    if channel is None:
+        raise ValueError("RSS channel bulunamadı")
+    for item in channel.findall("item")[limit:]:
+        channel.remove(item)
+    self_link = channel.find(f"{{{ATOM}}}link[@rel='self']")
+    if self_link is not None and feed_url:
+        self_link.set("href", feed_url)
+    ET.indent(root, space="  ")
+    return ET.tostring(root, encoding="utf-8", xml_declaration=True) + b"\n"
 
 
 def rss_date(stamp):
     return format_datetime(datetime.fromisoformat(stamp.replace("Z", "+00:00")))
 
 
-def render_feed(items, now, previous=None, limit=100, site_base_url=""):
+def render_feed(items, now, previous=None, limit=100, site_base_url="", feed_filename="feed.xml"):
     selected = sort_items(items)[:limit]
     root = ET.Element("rss", {"version": "2.0"})
     channel = ET.SubElement(root, "channel")
@@ -34,16 +58,16 @@ def render_feed(items, now, previous=None, limit=100, site_base_url=""):
         if parts.scheme != "https" or not parts.netloc or parts.query or parts.fragment or parts.username:
             raise ValueError("SITE_BASE_URL geçerli bir HTTPS site adresi olmalı")
         ET.SubElement(channel, f"{{{ATOM}}}link", {
-            "href": site_base_url.rstrip("/") + "/feed.xml", "rel": "self", "type": "application/rss+xml"})
+            "href": site_base_url.rstrip("/") + "/" + feed_filename, "rel": "self", "type": "application/rss+xml"})
     for item in selected:
         node = ET.SubElement(channel, "item")
-        ET.SubElement(node, "title").text = item.title
+        ET.SubElement(node, "title").text = display_title(item.title)
         ET.SubElement(node, "link").text = item.url
         ET.SubElement(node, "guid", {"isPermaLink": "false"}).text = item.id
         local_noon = datetime.combine(date.fromisoformat(item.published_date), time(12), ZoneInfo("Europe/Istanbul"))
         ET.SubElement(node, "pubDate").text = format_datetime(local_noon)
         ET.SubElement(node, "description").text = (
-            f"{escape(item.title)} — Yayımlanma tarihi: {item.published_date}. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.")
+            f"{escape(display_title(item.title))} — Yayımlanma tarihi: {item.published_date}. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.")
     ET.indent(root, space="  ")
 
     def serialize():
@@ -67,7 +91,7 @@ def render_html(items, checked_at):
     for item in sort_items(items):
         rows.append(f'''<li class="announcement">
   <time datetime="{escape(item.published_date, quote=True)}">{date.fromisoformat(item.published_date).strftime('%d.%m.%Y')}</time>
-  <h3><a href="{escape(item.url, quote=True)}">{escape(item.title)}<span aria-hidden="true"> ↗</span></a></h3>
+  <h3><a href="{escape(item.url, quote=True)}">{escape(display_title(item.title))}<span aria-hidden="true"> ↗</span></a></h3>
   <span class="source">KVKK · Resmî duyuru</span>
 </li>''')
     checked = datetime.fromisoformat(checked_at.replace("Z", "+00:00")).astimezone(ZoneInfo("Europe/Istanbul"))
@@ -78,6 +102,7 @@ def render_html(items, checked_at):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="KVKK veri ihlali duyurularını bağımsız RSS akışıyla takip edin. Yalnızca başlık, tarih ve resmî bağlantı.">
 <title>KVKK Veri İhlali Takip</title>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="alternate" type="application/rss+xml" title="KVKK Veri İhlali RSS" href="./feed.xml">
 <link rel="stylesheet" href="./styles.css">
 </head>
@@ -91,6 +116,7 @@ def render_html(items, checked_at):
 <h1 id="page-title">KVKK Veri İhlali<br><span>Takip.</span></h1>
 <p class="intro">Veri ihlali duyuruları, tek bir akışta.<br>Yeni bildirimleri RSS okuyucunuzdan takip edin.</p>
 <a class="subscribe" href="./feed.xml"><span aria-hidden="true">◔</span> RSS'e abone ol <span aria-hidden="true">↗</span></a>
+<p class="feed-options">RSS kayıt sınırı: {' · '.join(f'<a href="./feed-{limit}.xml">Son {limit}</a>' for limit in FEED_LIMITS)}</p>
 <p class="independent">{DISCLAIMER}</p>
 </section>
 <section class="listing" id="duyurular" aria-labelledby="list-title">

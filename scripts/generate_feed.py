@@ -16,7 +16,7 @@ if __package__ in {None, ""}:
 
 import requests
 from scripts.models import Announcement, SOURCE_URL, merge_items
-from scripts.render import json_bytes, render_feed, render_html
+from scripts.render import FEED_LIMITS, json_bytes, render_feed, render_html
 from scripts.scraper import Scraper, SourceError
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -119,6 +119,11 @@ def run(args, scraper=None, now=None):
         docs / "status.json": json_bytes(status),
         docs / ".nojekyll": b"",
     }
+    for limit in FEED_LIMITS:
+        path = docs / f"feed-{limit}.xml"
+        old = path.read_bytes() if path.exists() else None
+        outputs[path] = render_feed(items, now, old, min(limit, args.max_feed_items),
+                                    args.site_base_url, path.name)
     json.loads(outputs[archive_path])
     json.loads(outputs[docs / "status.json"])
     publish_files(outputs)

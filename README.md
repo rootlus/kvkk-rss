@@ -13,10 +13,10 @@ python -m pip install -r requirements.txt
 python -m pytest -q
 python scripts/generate_feed.py --check-only
 python scripts/generate_feed.py --bootstrap-pages 9
-python -m http.server 8000 --directory docs
+python -m scripts.serve --port 8000
 ```
 
-Windows'ta sanal ortamı `.venv\Scripts\activate` ile etkinleştirin. Siteyi `http://localhost:8000/`, akışı `http://localhost:8000/feed.xml` adresinde açın. Yalnızca statik dosyalar sunulur; web sunucusu veri toplamaz. Düzenli güncelleme:
+Windows'ta sanal ortamı `.venv\Scripts\activate` ile etkinleştirin. Siteyi `http://localhost:8000/`, akışı `http://localhost:8000/feed.xml` adresinde açın. Sunucu yayımlanmış dosyaları sunar, veri toplamaz. Düzenli güncelleme:
 
 ```bash
 python scripts/generate_feed.py --max-pages 5
@@ -29,9 +29,18 @@ python scripts/generate_feed.py --help
 
 - `data/announcements.json`: sürüm 1 şeması; tüm toplanan duyurular ve değişmeyen `first_seen_at` UTC zamanı.
 - `docs/feed.xml`: son 100 duyuru; sabit içerik kimliği, resmî bağlantı, güvenli özet.
+- `docs/feed-5.xml`, `feed-10.xml`, `feed-25.xml`, `feed-50.xml`: aynı akışın sınırlı sürümleri; ana akıştaki kayıt sayısını aşmaz.
 - `docs/index.html`: tüm arşiv, duyuru tarihleri, RSS bağlantısı ve son başarılı kontrol zamanı.
 - `docs/status.json`: UTC kontrol zamanı, toplam kayıt, o çalışmada yeni bulunan ve gözlenen kayıt sayıları. Bu dosya deploy'un başarılı olduğunu iddia etmez.
-- `docs/styles.css` ve `.nojekyll`: statik sunum.
+- `docs/styles.css`, `favicon.svg` ve `.nojekyll`: statik sunum.
+
+Sayfa ve RSS başlıklarının başındaki “Kamuoyu Duyurusu” ifadesi kaldırılır. Örneğin “Kamuoyu Duyurusu (Veri İhlali Bildirimi) – Şirket” başlığı “(Veri İhlali Bildirimi) – Şirket” olarak görünür. JSON arşivi özgün başlığı korur.
+
+### RSS kayıt sınırı
+
+`python -m scripts.serve --port 8000` ile çalışan sunucu, `http://localhost:8000/feed.xml?limit=5` adresinde en yeni 5 kaydı döndürür. `limit` pozitif bir tam sayı olmalıdır; boş, sıfır, negatif, tekrarlanan veya geçersiz değerler HTTP 400 döndürür. Parametre verilmezse ana akış sunulur. Mevcut akıştan büyük bir sınır tüm mevcut kayıtları döndürür; parametre arşivden ek kayıt getirmez. GET ve HEAD desteklenir.
+
+**GitHub Pages statik yayınında sorgu parametresi işlenmez.** Pages üzerinde son 5 kayıt için `feed-5.xml`, diğer sınırlar için `feed-10.xml`, `feed-25.xml` veya `feed-50.xml` kullanın. Bu bağlantılar ana sayfada da bulunur. `feed.xml?limit=N` desteğini yayında kullanmak için Python sunucusunu çalıştırabilen bir barındırma ortamı gerekir; GitHub Pages dağıtımı bu sunucuyu çalıştırmaz.
 
 Başlık/tarih/URL değişiklikleri aynı kimlik altında güncellenir; önceki `first_seen_at` korunur. Kaynaktan kaybolan duyurular otomatik silinmez. Eşit tarihli kayıtlar kimliğe göre sıralanır. RSS'nin içeriği değişmediğinde XML dosyası **byte düzeyinde aynı kalır**, `lastBuildDate` yenilenmez. Feed sınırının dışındaki eski bir kaydın değişmesi RSS'yi etkilemez.
 
@@ -80,7 +89,7 @@ CLI seçenekleri ilgili environment değerinden önce gelir; sayfa ve öğe sın
 | `SITE_BASE_URL` | boş | HTTPS yayın adresi; varsa RSS self bağlantısı |
 | `KVKK_USER_AGENT` | `kvkk-rss/1.0` | Actions repository adresini de ekler |
 
-`--output-root` ile verileri farklı bir köke üretebilirsiniz; bu seçenek CSS'yi kopyalamaz, alternatif kökte `docs/styles.css` dosyasını ayrıca sağlayın. Kaynak URL'si, erişim kısıtlarını aşmak için kullanılamaz.
+`--output-root` ile verileri farklı bir köke üretebilirsiniz; bu seçenek statik varlıkları kopyalamaz, alternatif kökte `docs/styles.css` ve `docs/favicon.svg` dosyalarını ayrıca sağlayın. Sunucuya `--directory /YOL/docs` ile bu dizini verebilirsiniz. Kaynak URL'si, erişim kısıtlarını aşmak için kullanılamaz.
 
 ## Hata davranışı ve bakım
 

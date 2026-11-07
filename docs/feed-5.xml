@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>KVKK Veri İhlali Bildirimleri (Bağımsız RSS)</title>
+    <link>https://www.kvkk.gov.tr/veri-ihlali-bildirimi</link>
+    <description>KVKK'nın kamuya açık veri ihlali duyuruları. KVKK ile bağlantısı olmayan bağımsız projedir.</description>
+    <language>tr-TR</language>
+    <lastBuildDate>Sat, 07 Nov 2026 09:09:09 +0000</lastBuildDate>
+    <atom:link href="https://rootlus.github.io/kvkk-rss/feed-5.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(Veri İhlali Bildirimi) – D Fast Dağıtım Hizmetleri ve Lojistik A.Ş.</title>
+      <link>https://www.kvkk.gov.tr/Icerik/9079/kamuoyu-duyurusu-veri-ihlali-bildirimi-d-fast-dagitim-hizmetleri-ve-lojistik-a-s</link>
+      <guid isPermaLink="false">kvkk-9079</guid>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 +0300</pubDate>
+      <description>(Veri İhlali Bildirimi) – D Fast Dağıtım Hizmetleri ve Lojistik A.Ş. — Yayımlanma tarihi: 2026-11-04. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
+    </item>
+    <item>
+      <title>(Veri İhlali Bildirimi) – D-Market Elektronik Hizmetler ve Ticaret A.Ş.</title>
+      <link>https://www.kvkk.gov.tr/Icerik/9080/kamuoyu-duyurusu-veri-ihlali-bildirimi-d-market-elektronik-hizmetler-ve-ticaret-a-s</link>
+      <guid isPermaLink="false">kvkk-9080</guid>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 +0300</pubDate>
+      <description>(Veri İhlali Bildirimi) – D-Market Elektronik Hizmetler ve Ticaret A.Ş. — Yayımlanma tarihi: 2026-11-04. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
+    </item>
+    <item>
+      <title>(Veri İhlali Bildirimi) – KVK Teknik Servis Hiz. ve Tic. A.Ş.</title>
+      <link>https://www.kvkk.gov.tr/Icerik/9081/kamuoyu-duyurusu-veri-ihlali-bildirimi-kvk-teknik-servis-hiz-ve-tic-a-s</link>
+      <guid isPermaLink="false">kvkk-9081</guid>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 +0300</pubDate>
+      <description>(Veri İhlali Bildirimi) – KVK Teknik Servis Hiz. ve Tic. A.Ş. — Yayımlanma tarihi: 2026-11-04. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
+    </item>
+    <item>
+      <title>(Veri İhlali Bildirimi) – Turksport Spor Ürünleri San. ve Tic. Ltd. Şti.</title>
+      <link>https://www.kvkk.gov.tr/Icerik/9082/kamuoyu-duyurusu-veri-ihlali-bildirimi-turksport-spor-urunleri-san-ve-tic-ltd-sti</link>
+      <guid isPermaLink="false">kvkk-9082</guid>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 +0300</pubDate>
+      <description>(Veri İhlali Bildirimi) – Turksport Spor Ürünleri San. ve Tic. Ltd. Şti. — Yayımlanma tarihi: 2026-11-04. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
+    </item>
+    <item>
+      <title>(Veri İhlali Bildirimi) – WS Audiology Turkey Tıbbi Cihazlar A.Ş.</title>
+      <link>https://www.kvkk.gov.tr/Icerik/9083/kamuoyu-duyurusu-veri-ihlali-bildirimi-ws-audiology-turkey-tibbi-cihazlar-a-s</link>
+      <guid isPermaLink="false">kvkk-9083</guid>
+      <pubDate>Wed, 04 Nov 2026 12:00:00 +0300</pubDate>
+      <description>(Veri İhlali Bildirimi) – WS Audiology Turkey Tıbbi Cihazlar A.Ş. — Yayımlanma tarihi: 2026-11-04. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
+    </item>
+  </channel>
+</rss>
