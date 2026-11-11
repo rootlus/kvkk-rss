@@ -5,8 +5,57 @@
     <link>https://www.kvkk.gov.tr/veri-ihlali-bildirimi</link>
     <description>KVKK'nın kamuya açık veri ihlali duyuruları. KVKK ile bağlantısı olmayan bağımsız projedir.</description>
     <language>tr-TR</language>
-    <lastBuildDate>Sat, 07 Nov 2026 09:09:09 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 22:40:45 +0000</lastBuildDate>
     <atom:link href="https://rootlus.github.io/kvkk-rss/feed-25.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(Veri İhlali Bildirimi) – Bursa Ticaret ve Sanayi Odası</title>
+      <link>https://www.kvkk.gov.tr/Icerik/9094/kamuoyu-duyurusu-veri-ihlali-bildirimi-bursa-ticaret-ve-sanayi-odasi</link>
+      <guid isPermaLink="false">kvkk-9094</guid>
+      <pubDate>Wed, 11 Nov 2026 12:00:00 +0300</pubDate>
+      <description>(Veri İhlali Bildirimi) – Bursa Ticaret ve Sanayi Odası — Yayımlanma tarihi: 2026-11-11. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
+    </item>
+    <item>
+      <title>(Veri İhlali Bildirimi) – Stemline Therapeutics, Inc.</title>
+      <link>https://www.kvkk.gov.tr/Icerik/9095/kamuoyu-duyurusu-veri-ihlali-bildirimi-stemline-therapeutics-inc</link>
+      <guid isPermaLink="false">kvkk-9095</guid>
+      <pubDate>Wed, 11 Nov 2026 12:00:00 +0300</pubDate>
+      <description>(Veri İhlali Bildirimi) – Stemline Therapeutics, Inc. — Yayımlanma tarihi: 2026-11-11. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
+    </item>
+    <item>
+      <title>(Veri İhlali Bildirimi) – DHL AG</title>
+      <link>https://www.kvkk.gov.tr/Icerik/9096/kamuoyu-duyurusu-veri-ihlali-bildirimi-dhl-ag</link>
+      <guid isPermaLink="false">kvkk-9096</guid>
+      <pubDate>Wed, 11 Nov 2026 12:00:00 +0300</pubDate>
+      <description>(Veri İhlali Bildirimi) – DHL AG — Yayımlanma tarihi: 2026-11-11. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
+    </item>
+    <item>
+      <title>(Veri İhlali Bildirimi) – Pegasus Hava Taşımacılığı A.Ş.</title>
+      <link>https://www.kvkk.gov.tr/Icerik/9097/kamuoyu-duyurusu-veri-ihlali-bildirimi-pegasus-hava-tasimaciligi-a-s</link>
+      <guid isPermaLink="false">kvkk-9097</guid>
+      <pubDate>Wed, 11 Nov 2026 12:00:00 +0300</pubDate>
+      <description>(Veri İhlali Bildirimi) – Pegasus Hava Taşımacılığı A.Ş. — Yayımlanma tarihi: 2026-11-11. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
+    </item>
+    <item>
+      <title>(Veri İhlali Bildirimi) – Ethica Sigorta A.Ş.</title>
+      <link>https://www.kvkk.gov.tr/Icerik/9098/kamuoyu-duyurusu-veri-ihlali-bildirimi-ethica-sigorta-a-s</link>
+      <guid isPermaLink="false">kvkk-9098</guid>
+      <pubDate>Wed, 11 Nov 2026 12:00:00 +0300</pubDate>
+      <description>(Veri İhlali Bildirimi) – Ethica Sigorta A.Ş. — Yayımlanma tarihi: 2026-11-11. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
+    </item>
+    <item>
+      <title>(Veri İhlali Bildirimi) – Air India Limited</title>
+      <link>https://www.kvkk.gov.tr/Icerik/9099/kamuoyu-duyurusu-veri-ihlali-bildirimi-air-india-limited</link>
+      <guid isPermaLink="false">kvkk-9099</guid>
+      <pubDate>Wed, 11 Nov 2026 12:00:00 +0300</pubDate>
+      <description>(Veri İhlali Bildirimi) – Air India Limited — Yayımlanma tarihi: 2026-11-11. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
+    </item>
+    <item>
+      <title>(Veri İhlali Bildirimi) – Sadunoğlu İnşaat Taah.Day. Tük. Malları San. ve Tic. AŞ (Mard-Inn Hotel)</title>
+      <link>https://www.kvkk.gov.tr/Icerik/9100/kamuoyu-duyurusu-veri-ihlali-bildirimi-sadunoglu-insaat-taah-day-tuk-mallari-san-ve-tic-as-mard-inn-hotel</link>
+      <guid isPermaLink="false">kvkk-9100</guid>
+      <pubDate>Wed, 11 Nov 2026 12:00:00 +0300</pubDate>
+      <description>(Veri İhlali Bildirimi) – Sadunoğlu İnşaat Taah.Day. Tük. Malları San. ve Tic. AŞ (Mard-Inn Hotel) — Yayımlanma tarihi: 2026-11-11. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
+    </item>
     <item>
       <title>(Veri İhlali Bildirimi) – D Fast Dağıtım Hizmetleri ve Lojistik A.Ş.</title>
       <link>https://www.kvkk.gov.tr/Icerik/9079/kamuoyu-duyurusu-veri-ihlali-bildirimi-d-fast-dagitim-hizmetleri-ve-lojistik-a-s</link>
@@ -132,55 +181,6 @@
       <guid isPermaLink="false">kvkk-9065</guid>
       <pubDate>Wed, 21 Oct 2026 12:00:00 +0300</pubDate>
       <description>(Veri İhlali Bildirimi) – Akropol Turizm Yatırımları İnşaat ve Dış Ticaret Anonim Şirketi (MW Phokaia Beach &amp;amp; Resort) — Yayımlanma tarihi: 2026-10-21. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
-    </item>
-    <item>
-      <title>(Veri İhlali Bildirimi) – Choice Hotels International, Inc.</title>
-      <link>https://www.kvkk.gov.tr/Icerik/9066/kamuoyu-duyurusu-veri-ihlali-bildirimi-choice-hotels-international-inc</link>
-      <guid isPermaLink="false">kvkk-9066</guid>
-      <pubDate>Wed, 21 Oct 2026 12:00:00 +0300</pubDate>
-      <description>(Veri İhlali Bildirimi) – Choice Hotels International, Inc. — Yayımlanma tarihi: 2026-10-21. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
-    </item>
-    <item>
-      <title>(Veri İhlali Bildirimi) – İzmir Büyükşehir Belediyesi</title>
-      <link>https://www.kvkk.gov.tr/Icerik/9067/kamuoyu-duyurusu-veri-ihlali-bildirimi-izmir-buyuksehir-belediyesi</link>
-      <guid isPermaLink="false">kvkk-9067</guid>
-      <pubDate>Wed, 21 Oct 2026 12:00:00 +0300</pubDate>
-      <description>(Veri İhlali Bildirimi) – İzmir Büyükşehir Belediyesi — Yayımlanma tarihi: 2026-10-21. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
-    </item>
-    <item>
-      <title>(Veri İhlali Bildirimi) – Enka Spor Eğitim ve Sosyal Yardım Vakfı</title>
-      <link>https://www.kvkk.gov.tr/Icerik/9068/kamuoyu-duyurusu-veri-ihlali-bildirimi-enka-spor-egitim-ve-sosyal-yardim-vakfi</link>
-      <guid isPermaLink="false">kvkk-9068</guid>
-      <pubDate>Wed, 21 Oct 2026 12:00:00 +0300</pubDate>
-      <description>(Veri İhlali Bildirimi) – Enka Spor Eğitim ve Sosyal Yardım Vakfı — Yayımlanma tarihi: 2026-10-21. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
-    </item>
-    <item>
-      <title>(Veri İhlali Bildirimi) – DNC Sağlık Hizmetleri AŞ</title>
-      <link>https://www.kvkk.gov.tr/Icerik/9069/kamuoyu-duyurusu-veri-ihlali-bildirimi-dnc-saglik-hizmetleri-as</link>
-      <guid isPermaLink="false">kvkk-9069</guid>
-      <pubDate>Wed, 21 Oct 2026 12:00:00 +0300</pubDate>
-      <description>(Veri İhlali Bildirimi) – DNC Sağlık Hizmetleri AŞ — Yayımlanma tarihi: 2026-10-21. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
-    </item>
-    <item>
-      <title>(Veri İhlali Bildirimi) – Baxter Turkey Renal Hizmetler AŞ</title>
-      <link>https://www.kvkk.gov.tr/Icerik/9070/kamuoyu-duyurusu-veri-ihlali-bildirimi-baxter-turkey-renal-hizmetler-as</link>
-      <guid isPermaLink="false">kvkk-9070</guid>
-      <pubDate>Wed, 21 Oct 2026 12:00:00 +0300</pubDate>
-      <description>(Veri İhlali Bildirimi) – Baxter Turkey Renal Hizmetler AŞ — Yayımlanma tarihi: 2026-10-21. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
-    </item>
-    <item>
-      <title>(Veri İhlali Bildirimi) – Kurukahveci Mehmet Efendi Mahdumları Gıda Sanayi ve Ticaret Anonim Şirketi (www.mehmetefendi.com)</title>
-      <link>https://www.kvkk.gov.tr/Icerik/9071/kamuoyu-duyurusu-veri-ihlali-bildirimi-kurukahveci-mehmet-efendi-mahdumlari-gida-sanayi-ve-ticaret-anonim-sirketi-www-mehmetefendi-com</link>
-      <guid isPermaLink="false">kvkk-9071</guid>
-      <pubDate>Wed, 21 Oct 2026 12:00:00 +0300</pubDate>
-      <description>(Veri İhlali Bildirimi) – Kurukahveci Mehmet Efendi Mahdumları Gıda Sanayi ve Ticaret Anonim Şirketi (www.mehmetefendi.com) — Yayımlanma tarihi: 2026-10-21. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
-    </item>
-    <item>
-      <title>(Veri İhlali Bildirimi) – Güllüoğlu Gıda San. ve Tic. AŞ (https://www.karakoygulluoglu.com/)</title>
-      <link>https://www.kvkk.gov.tr/Icerik/9072/kamuoyu-duyurusu-veri-ihlali-bildirimi-gulluoglu-gida-san-ve-tic-as-https-www-karakoygulluoglu-com</link>
-      <guid isPermaLink="false">kvkk-9072</guid>
-      <pubDate>Wed, 21 Oct 2026 12:00:00 +0300</pubDate>
-      <description>(Veri İhlali Bildirimi) – Güllüoğlu Gıda San. ve Tic. AŞ (https://www.karakoygulluoglu.com/) — Yayımlanma tarihi: 2026-10-21. Ayrıntılar için resmî KVKK duyurusunu ziyaret edin.</description>
     </item>
   </channel>
 </rss>
